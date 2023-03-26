@@ -28,7 +28,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Hello World ayoube bakhouch this is your first fastapiapplication on Heroku"}
+    return {"message": "Hello World ayoube bakhouch this is your first fastapiapplication on Heroku "}
 
 
 
