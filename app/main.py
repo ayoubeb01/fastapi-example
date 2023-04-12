@@ -28,7 +28,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Hello World ayoube bakhouch this is a fastapiapplication on oceanloud Yupi"}
+    return {"message": "Hello World ayoube bakhouch this is a fastapiapplication on oceancloud on heroku and on local"}
 
 
 
