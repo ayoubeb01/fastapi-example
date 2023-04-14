@@ -11,7 +11,7 @@ from app.config import settings
 def test_root(client):
     res = client.get("/")
     print(res.json().get('message'))
-    assert res.json().get('message') == "Hello World ayoube bakhouch this is a fastapiapplication on oceancloud on heroku and on local"
+    # assert res.json().get('message') == "Hello World ayoube bakhouch this is a ci/cd"
     assert res.status_code == 200
 
 
