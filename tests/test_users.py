@@ -13,7 +13,7 @@ def test_root(client):
     print(res.json().get('message'))
     # assert res.json().get('message') == "Hello World ayoube bakhouch this is a ci/cd"
     assert res.status_code == 200
-
+    
 
 
 def test_create_user(client):
