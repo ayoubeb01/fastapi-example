@@ -74,6 +74,9 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
+      - run: |
+        heroku create --buildpack https://github.com/heroku/heroku-buildpack-python.git
+        
       - name: deploying to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
