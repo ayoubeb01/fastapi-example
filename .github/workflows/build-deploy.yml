@@ -83,5 +83,4 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           justlogin: true
       - run: |
-          heroku container:login
           git push heroku main
