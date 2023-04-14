@@ -73,17 +73,11 @@ jobs:
       name: production
     steps:
       - name: pulling git repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      # - name: deploy to heroku
-      #   uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-      #   with:
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
-      #     heroku_email: ${{secrets.EMAIL}}
-      - name: Add remote origin
-        run: |
-          git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
-      - name: Deploy to Heroku
-        run: |
-          git push heroku HEAD:master -f
+      - name: deploy to heroku
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
+          heroku_email: ${{secrets.EMAIL}}
